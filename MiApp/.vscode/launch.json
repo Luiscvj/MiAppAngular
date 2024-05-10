@@ -10,6 +10,29 @@
       "url": "http://localhost:4200/"
     },
     {
+      "name": "ng serve (Opera)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:4200/",
+      "webRoot": "${workspaceFolder}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "webpack:///src/*": "${webRoot}/src/*"
+      },
+      "userDataDir": "${workspaceFolder}/.vscode/.opera",
+      "runtimeExecutable": "C:/Users/Asus/AppData/Local/Programs/Opera GX/launcher.exe", // Ruta al ejecutable de Opera en tu sistema
+      "args": [
+        "--remote-debugging-port=9222"
+      ],
+      "sourceMapPathOverrides": {
+        "webpack:///./*": "${webRoot}/*",
+        "webpack:///src/*": "${webRoot}/src/*",
+        "webpack:///*": "*",
+        "webpack:///./~/*": "${webRoot}/node_modules/*"
+      }
+    },
+    
+    {
       "name": "ng test",
       "type": "chrome",
       "request": "launch",
